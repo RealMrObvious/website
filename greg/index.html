@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" href="Media/favicon.png">
+  <title>MrObvious.xyz</title>
+  <link rel="stylesheet" href="src/style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="src/jquery.background-video.js"></script>
+  <style>
+    body {
+      background: linear-gradient(-45deg, #ed0000, #f0c800, #02a635, #0036e6);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .overlay {
+
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.95);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="cont">
+    <h1>.::Powered by::.</h1>
+    <img class="footer-logo responsive-img" src="Media/Obamahedron.webp">
+    <p>bubscribe</p>
+  </div>
+
+
+  <div id="particles-js"></div>
+  <!-- <script src="src/particles.min.js"></script> -->
+  <script src='src/particles.min.js'></script>
+  <script src="src/script.js"></script>
+
+
+  <div id="myNav" class="overlay">
+    <div class="overlay-content">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="javascript:void(0);" onclick="closeNav();"> Enter </a>
+      <a href="#"></a>
+    </div>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      var bgm = new Audio('Media/bgm.mp3');
+      bgm.volume = 0.5
+      bgm.play();
+      document.getElementById("myNav").style.width = "0%";
+    }
+
+    function pauseAudio() {
+      bgm.pause();
+    } 
+  </script>
+
+  <!-- <img src="Media/pause.png" style="position:relative; right:0px; bottom:0 px; width:36px; height:36px; border:none;" onclick="bgm.pause()" /> -->
+
+  <!--  <a href="https://www.instagram.com/realmrobvious">
+  <img src="Media/ig_logo.png" style="position:relative; right:0px; top:0 px; width:36px; height:36px; border:none;" />
+</a>  -->
+
+  <a href="https://www.twitter.com/realmrobvious">
+    <img src="Media/tw_logo.png"
+      style="position:relative; right:0px; top:0 px; width:36px; height:36px; border:none;" />
+  </a>
+
+  <a href="https://www.twitch.tv/realmrobvious">
+    <img src="Media/twch_logo.png"
+      style="position:relative; right:0px; top:0 px; width:36px; height:36px; border:none;" />
+  </a>
+
+  <a href="https://howlongtobeat.com/user?n=MrObvious">
+    <img src="Media/hltb_logo.png"
+      style="position:relative; right:0px; top:0 px; width:36px; height:36px; border:none;" />
+  </a>
+
+  <a href="https://www.youtube.com/channel/UCZp5O7uQU-7lsOA5_kHgZPg">
+    <img src="Media/yt_logo.png"
+      style="position:relative; right:0px; top:0 px; width:36px; height:36px; border:none;" />
+  </a>
+
+  <a href="https://open.spotify.com/user/8v8salcq1cpfwym77vjthcdnm">
+    <img src="Media/sfy_logo.png"
+      style="position:relative; right:0px; top:0 px; width:36px; height:36px; border:none;" />
+  </a>
+
+  <body onload="openNav()">
+  </body>
+
+</html>
